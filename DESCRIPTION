@@ -1,0 +1,24 @@
+Package: downscaledl
+Type: Package
+Title: Downscale of RS Images using Deep Learning
+Version: 1.0
+Date: 2019-09-09
+Author: Lianfa Li
+Maintainer: Lianfa Li <lspatial@gmail.com>
+Description: This package provides the functions of downscaling 
+      the coarse-resolution remote sensing images into 
+      fined-resolution images. Currently, the resautonet is used 
+      as the deep learning algorithm for downsclaing. 
+      This work was done based on this paper:
+         https://doi.org/10.3390/rs11111378.
+Depends: R (>= 3.1)
+Imports: Rcpp (>= 1.0.0),keras,rstack,dplyr,magrittr
+LinkingTo: Rcpp, RcppArmadillo
+SystemRequirements: C++11
+License: GPL
+Encoding: UTF-8
+LazyData: true
+NeedsCompilation: yes
+RoxygenNote: 6.1.1
+
+

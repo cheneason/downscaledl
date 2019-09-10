@@ -1,0 +1,44 @@
+[
+    {
+        "definitions" : [
+            {
+                "column" : 11,
+                "file" : "/wkspace/RWkspace/downscaledl/src/rcpparmabasic.cpp",
+                "kind" : 6,
+                "line" : 18,
+                "name" : "rcpparmabasic_test",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpparmabasic_test#"
+            },
+            {
+                "column" : 11,
+                "file" : "/wkspace/RWkspace/downscaledl/src/rcpparmabasic.cpp",
+                "kind" : 6,
+                "line" : 30,
+                "name" : "rcpparmabasic_outerproduct(const arma::colvec &)",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpparmabasic_outerproduct#&1$@N@arma@C@Col>#d#"
+            },
+            {
+                "column" : 8,
+                "file" : "/wkspace/RWkspace/downscaledl/src/rcpparmabasic.cpp",
+                "kind" : 6,
+                "line" : 38,
+                "name" : "rcpparmabasic_innerproduct(const arma::colvec &)",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpparmabasic_innerproduct#&1$@N@arma@C@Col>#d#"
+            },
+            {
+                "column" : 12,
+                "file" : "/wkspace/RWkspace/downscaledl/src/rcpparmabasic.cpp",
+                "kind" : 6,
+                "line" : 47,
+                "name" : "rcpparmabasic_bothproducts(const arma::colvec &)",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpparmabasic_bothproducts#&1$@N@arma@C@Col>#d#"
+            }
+        ],
+        "file" : "/wkspace/RWkspace/downscaledl/src/rcpparmabasic.cpp",
+        "file_last_write" : 1568060011
+    }
+]

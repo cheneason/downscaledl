@@ -1,0 +1,53 @@
+\name{downscaledl-package}
+\alias{downscaledl-package}
+\alias{downscaledl}
+\docType{package}
+\title{
+\packageTitle{downscaledl}
+}
+\description{
+\packageDescription{downscaledl}
+}
+\details{
+
+The DESCRIPTION file:
+\packageDESCRIPTION{downscaledl}
+\packageIndices{downscaledl}
+~~ An overview of how to use the package, including the most ~~
+~~ important functions ~~
+}
+\author{
+\packageAuthor{downscaledl}
+
+Maintainer: \packageMaintainer{downscaledl}
+}
+\references{
+~~ Literature or other references for background information ~~
+}
+\keyword{ package }
+\seealso{
+~~ Optional links to other man pages, e.g. ~~
+~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+}
+\examples{
+\donttest{
+  tfile=paste("/data/test.csv",sep="") # CSV file for fine-resolution text data 
+  chinacovs=read.csv(tfile) 
+  tcols=c("lat","lon","lat2","lon2","lonlat","elevation","julian_day",
+        "image_value","pblh") # the features to be selected 
+  chinacovsSP=SpatialPointsDataFrame(chinacovs[,c("lon","lat")],chinacovs,
+         proj4string=CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"))
+  chinacovsSP_p=spTransform(chinacovsSP,CRSobj=
+         CRS("+proj=lcc +lat_1=30 +lat_2=62 +lat_0=0 +lon_0=105 +x_0=0 +y_0=0 +ellps=krass +units=m +no_defs"))
+  gridded(chinacovsSP_p)=TRUE
+  chinastk=stack(chinacovsSP_p)
+  
+  coarseImg_fld="/data/coarseGrd.tif" # Tiff file of coarse resolution 
+  coarseImg=raster(coarseImg_fld)
+  c.grid=gldas_re2_cn_p 
+  r2=subset(chinastk,c("lon","lat","elevation","pblh","lat2","lon2","lonlat")) # Predictors tiff stack to be used in downscaling 
+  tfl="/data/finedGrd.tif" # Tiff file of fined resolution to be downscaled
+  fpredict0=raster(tfl)
+  ares=ResautoDownscale(r2,fpredict0,c.grid,ss= 0.2, cores= 5, thresh = 0.01,ntime=6) # Downscaling and return the results. 
+ }
+}

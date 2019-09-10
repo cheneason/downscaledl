@@ -1,0 +1,17 @@
+{
+    "args" : [
+        "-I/usr/lib64/R/library/Rcpp/include",
+        "-I/usr/lib64/R/library/RcppArmadillo/include",
+        "-std=gnu++11",
+        "-I/usr/include/R",
+        "-DNDEBUG",
+        "-I/usr/local/include",
+        "-fopenmp",
+        "-fpic",
+        "-fexceptions",
+        "-fstack-protector-strong"
+    ],
+    "hash" : "156805214915680516141568051614",
+    "is_cpp" : true,
+    "pch" : "Rcpp"
+}
